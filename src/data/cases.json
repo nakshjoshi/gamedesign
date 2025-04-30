@@ -1,0 +1,3308 @@
+[
+    {
+        "case_id": "CASE001",
+        "title": "The Cloud Switch Mystery",
+        "description": "Monitor computing resources and decide the optimal time to switch from on-premise to cloud computing.",
+        "objective": "Forecast resource exhaustion and prevent system failure while minimizing cloud costs.",
+        "tools_allowed": [
+            "Anomaly Marker",
+            "Forecast Predictor",
+            "LSTM Hint"
+        ],
+        "thresholds": {
+            "cpu": 85,
+            "memory": 90,
+            "network_io": 80
+        },
+        "dataset": [
+            {
+                "timestamp": "2024-04-01 10:00",
+                "cpu_usage": 41.37,
+                "memory_usage": 51.14,
+                "network_io": 24.83
+            },
+            {
+                "timestamp": "2024-04-01 11:00",
+                "cpu_usage": 42.32,
+                "memory_usage": 51.11,
+                "network_io": 26.99
+            },
+            {
+                "timestamp": "2024-04-01 12:00",
+                "cpu_usage": 41.73,
+                "memory_usage": 52.51,
+                "network_io": 26.05
+            },
+            {
+                "timestamp": "2024-04-01 13:00",
+                "cpu_usage": 40.99,
+                "memory_usage": 55.22,
+                "network_io": 27.08
+            },
+            {
+                "timestamp": "2024-04-01 14:00",
+                "cpu_usage": 42.78,
+                "memory_usage": 55.62,
+                "network_io": 28.14
+            },
+            {
+                "timestamp": "2024-04-01 15:00",
+                "cpu_usage": 44.17,
+                "memory_usage": 53.19,
+                "network_io": 28.43
+            },
+            {
+                "timestamp": "2024-04-01 16:00",
+                "cpu_usage": 44.89,
+                "memory_usage": 54.36,
+                "network_io": 28.58
+            },
+            {
+                "timestamp": "2024-04-01 17:00",
+                "cpu_usage": 44.19,
+                "memory_usage": 58.54,
+                "network_io": 27.96
+            },
+            {
+                "timestamp": "2024-04-01 18:00",
+                "cpu_usage": 44.58,
+                "memory_usage": 56.49,
+                "network_io": 30.02
+            },
+            {
+                "timestamp": "2024-04-01 19:00",
+                "cpu_usage": 47.69,
+                "memory_usage": 60.55,
+                "network_io": 30.42
+            },
+            {
+                "timestamp": "2024-04-01 20:00",
+                "cpu_usage": 47.08,
+                "memory_usage": 60.99,
+                "network_io": 31.5
+            },
+            {
+                "timestamp": "2024-04-01 21:00",
+                "cpu_usage": 46.23,
+                "memory_usage": 59.11,
+                "network_io": 30.85
+            },
+            {
+                "timestamp": "2024-04-01 22:00",
+                "cpu_usage": 48.25,
+                "memory_usage": 60.74,
+                "network_io": 31.67
+            },
+            {
+                "timestamp": "2024-04-01 23:00",
+                "cpu_usage": 49.18,
+                "memory_usage": 63.25,
+                "network_io": 33.27
+            },
+            {
+                "timestamp": "2024-04-02 00:00",
+                "cpu_usage": 49.15,
+                "memory_usage": 62.04,
+                "network_io": 33.21
+            },
+            {
+                "timestamp": "2024-04-02 01:00",
+                "cpu_usage": 48.94,
+                "memory_usage": 64.13,
+                "network_io": 33.69
+            },
+            {
+                "timestamp": "2024-04-02 02:00",
+                "cpu_usage": 48.1,
+                "memory_usage": 65.59,
+                "network_io": 35.5
+            },
+            {
+                "timestamp": "2024-04-02 03:00",
+                "cpu_usage": 50.66,
+                "memory_usage": 66.91,
+                "network_io": 35.17
+            },
+            {
+                "timestamp": "2024-04-02 04:00",
+                "cpu_usage": 51.57,
+                "memory_usage": 64.07,
+                "network_io": 36.87
+            },
+            {
+                "timestamp": "2024-04-02 05:00",
+                "cpu_usage": 52.55,
+                "memory_usage": 67.76,
+                "network_io": 35.73
+            },
+            {
+                "timestamp": "2024-04-02 06:00",
+                "cpu_usage": 52.24,
+                "memory_usage": 67.24,
+                "network_io": 36.84
+            },
+            {
+                "timestamp": "2024-04-02 07:00",
+                "cpu_usage": 53.76,
+                "memory_usage": 67.7,
+                "network_io": 37.95
+            },
+            {
+                "timestamp": "2024-04-02 08:00",
+                "cpu_usage": 53.69,
+                "memory_usage": 66.71,
+                "network_io": 37.88
+            },
+            {
+                "timestamp": "2024-04-02 09:00",
+                "cpu_usage": 55.24,
+                "memory_usage": 68.21,
+                "network_io": 38.88
+            },
+            {
+                "timestamp": "2024-04-02 10:00",
+                "cpu_usage": 56.11,
+                "memory_usage": 69.3,
+                "network_io": 38.19
+            },
+            {
+                "timestamp": "2024-04-02 11:00",
+                "cpu_usage": 55.59,
+                "memory_usage": 71.73,
+                "network_io": 38.52
+            },
+            {
+                "timestamp": "2024-04-02 12:00",
+                "cpu_usage": 53.93,
+                "memory_usage": 71.47,
+                "network_io": 38.47
+            },
+            {
+                "timestamp": "2024-04-02 13:00",
+                "cpu_usage": 56.56,
+                "memory_usage": 73.55,
+                "network_io": 39.68
+            },
+            {
+                "timestamp": "2024-04-02 14:00",
+                "cpu_usage": 57.83,
+                "memory_usage": 73.58,
+                "network_io": 39.49
+            },
+            {
+                "timestamp": "2024-04-02 15:00",
+                "cpu_usage": 56.84,
+                "memory_usage": 73.5,
+                "network_io": 40.24
+            },
+            {
+                "timestamp": "2024-04-02 16:00",
+                "cpu_usage": 57.64,
+                "memory_usage": 73.76,
+                "network_io": 40.76
+            },
+            {
+                "timestamp": "2024-04-02 17:00",
+                "cpu_usage": 60.01,
+                "memory_usage": 73.58,
+                "network_io": 39.97
+            },
+            {
+                "timestamp": "2024-04-02 18:00",
+                "cpu_usage": 57.62,
+                "memory_usage": 73.34,
+                "network_io": 41.65
+            },
+            {
+                "timestamp": "2024-04-02 19:00",
+                "cpu_usage": 61.87,
+                "memory_usage": 75.97,
+                "network_io": 41.29
+            },
+            {
+                "timestamp": "2024-04-02 20:00",
+                "cpu_usage": 59.19,
+                "memory_usage": 78.24,
+                "network_io": 42.88
+            },
+            {
+                "timestamp": "2024-04-02 21:00",
+                "cpu_usage": 61.76,
+                "memory_usage": 76.23,
+                "network_io": 41.42
+            },
+            {
+                "timestamp": "2024-04-02 22:00",
+                "cpu_usage": 62.63,
+                "memory_usage": 81.05,
+                "network_io": 43.81
+            },
+            {
+                "timestamp": "2024-04-02 23:00",
+                "cpu_usage": 63.09,
+                "memory_usage": 81.25,
+                "network_io": 43.01
+            },
+            {
+                "timestamp": "2024-04-03 00:00",
+                "cpu_usage": 64.15,
+                "memory_usage": 80.93,
+                "network_io": 43.76
+            },
+            {
+                "timestamp": "2024-04-03 01:00",
+                "cpu_usage": 65.61,
+                "memory_usage": 83.62,
+                "network_io": 44.54
+            },
+            {
+                "timestamp": "2024-04-03 02:00",
+                "cpu_usage": 64.87,
+                "memory_usage": 84.14,
+                "network_io": 45.81
+            },
+            {
+                "timestamp": "2024-04-03 03:00",
+                "cpu_usage": 67.91,
+                "memory_usage": 84.67,
+                "network_io": 44.39
+            },
+            {
+                "timestamp": "2024-04-03 04:00",
+                "cpu_usage": 67.71,
+                "memory_usage": 82.6,
+                "network_io": 46.22
+            },
+            {
+                "timestamp": "2024-04-03 05:00",
+                "cpu_usage": 66.08,
+                "memory_usage": 84.05,
+                "network_io": 46.19
+            },
+            {
+                "timestamp": "2024-04-03 06:00",
+                "cpu_usage": 69.31,
+                "memory_usage": 85.5,
+                "network_io": 45.55
+            },
+            {
+                "timestamp": "2024-04-03 07:00",
+                "cpu_usage": 69.39,
+                "memory_usage": 89.33,
+                "network_io": 45.65
+            },
+            {
+                "timestamp": "2024-04-03 08:00",
+                "cpu_usage": 70.51,
+                "memory_usage": 88.68,
+                "network_io": 46.52
+            },
+            {
+                "timestamp": "2024-04-03 09:00",
+                "cpu_usage": 70.51,
+                "memory_usage": 87.44,
+                "network_io": 47.29
+            },
+            {
+                "timestamp": "2024-04-03 10:00",
+                "cpu_usage": 69.12,
+                "memory_usage": 91.47,
+                "network_io": 48.27
+            },
+            {
+                "timestamp": "2024-04-03 11:00",
+                "cpu_usage": 71.95,
+                "memory_usage": 91.52,
+                "network_io": 47.9
+            },
+            {
+                "timestamp": "2024-04-03 12:00",
+                "cpu_usage": 71.39,
+                "memory_usage": 90.31,
+                "network_io": 47.31
+            },
+            {
+                "timestamp": "2024-04-03 13:00",
+                "cpu_usage": 74.56,
+                "memory_usage": 90.58,
+                "network_io": 49.06
+            },
+            {
+                "timestamp": "2024-04-03 14:00",
+                "cpu_usage": 72.76,
+                "memory_usage": 93.17,
+                "network_io": 49.04
+            },
+            {
+                "timestamp": "2024-04-03 15:00",
+                "cpu_usage": 72.98,
+                "memory_usage": 92.0,
+                "network_io": 49.42
+            },
+            {
+                "timestamp": "2024-04-03 16:00",
+                "cpu_usage": 74.49,
+                "memory_usage": 94.29,
+                "network_io": 49.71
+            },
+            {
+                "timestamp": "2024-04-03 17:00",
+                "cpu_usage": 73.59,
+                "memory_usage": 94.82,
+                "network_io": 49.69
+            },
+            {
+                "timestamp": "2024-04-03 18:00",
+                "cpu_usage": 74.38,
+                "memory_usage": 97.07,
+                "network_io": 51.82
+            },
+            {
+                "timestamp": "2024-04-03 19:00",
+                "cpu_usage": 76.77,
+                "memory_usage": 96.69,
+                "network_io": 51.72
+            },
+            {
+                "timestamp": "2024-04-03 20:00",
+                "cpu_usage": 77.35,
+                "memory_usage": 96.98,
+                "network_io": 52.19
+            },
+            {
+                "timestamp": "2024-04-03 21:00",
+                "cpu_usage": 78.45,
+                "memory_usage": 99.2,
+                "network_io": 53.11
+            },
+            {
+                "timestamp": "2024-04-03 22:00",
+                "cpu_usage": 77.13,
+                "memory_usage": 97.58,
+                "network_io": 52.41
+            },
+            {
+                "timestamp": "2024-04-03 23:00",
+                "cpu_usage": 75.92,
+                "memory_usage": 98.25,
+                "network_io": 53.94
+            },
+            {
+                "timestamp": "2024-04-04 00:00",
+                "cpu_usage": 79.09,
+                "memory_usage": 100,
+                "network_io": 53.11
+            },
+            {
+                "timestamp": "2024-04-04 01:00",
+                "cpu_usage": 79.56,
+                "memory_usage": 98.99,
+                "network_io": 53.5
+            },
+            {
+                "timestamp": "2024-04-04 02:00",
+                "cpu_usage": 79.04,
+                "memory_usage": 100,
+                "network_io": 53.88
+            },
+            {
+                "timestamp": "2024-04-04 03:00",
+                "cpu_usage": 78.57,
+                "memory_usage": 100,
+                "network_io": 55.28
+            },
+            {
+                "timestamp": "2024-04-04 04:00",
+                "cpu_usage": 80.14,
+                "memory_usage": 100,
+                "network_io": 54.98
+            },
+            {
+                "timestamp": "2024-04-04 05:00",
+                "cpu_usage": 82.74,
+                "memory_usage": 100,
+                "network_io": 55.82
+            },
+            {
+                "timestamp": "2024-04-04 06:00",
+                "cpu_usage": 81.46,
+                "memory_usage": 100,
+                "network_io": 56.37
+            },
+            {
+                "timestamp": "2024-04-04 07:00",
+                "cpu_usage": 82.34,
+                "memory_usage": 100,
+                "network_io": 56.56
+            },
+            {
+                "timestamp": "2024-04-04 08:00",
+                "cpu_usage": 84.24,
+                "memory_usage": 100,
+                "network_io": 55.81
+            },
+            {
+                "timestamp": "2024-04-04 09:00",
+                "cpu_usage": 82.41,
+                "memory_usage": 100,
+                "network_io": 57.42
+            },
+            {
+                "timestamp": "2024-04-04 10:00",
+                "cpu_usage": 84.48,
+                "memory_usage": 100,
+                "network_io": 57.2
+            },
+            {
+                "timestamp": "2024-04-04 11:00",
+                "cpu_usage": 81.51,
+                "memory_usage": 100,
+                "network_io": 58.58
+            },
+            {
+                "timestamp": "2024-04-04 12:00",
+                "cpu_usage": 84.36,
+                "memory_usage": 100,
+                "network_io": 58.25
+            },
+            {
+                "timestamp": "2024-04-04 13:00",
+                "cpu_usage": 84.17,
+                "memory_usage": 100,
+                "network_io": 58.39
+            },
+            {
+                "timestamp": "2024-04-04 14:00",
+                "cpu_usage": 85.33,
+                "memory_usage": 100,
+                "network_io": 57.74
+            },
+            {
+                "timestamp": "2024-04-04 15:00",
+                "cpu_usage": 87.33,
+                "memory_usage": 100,
+                "network_io": 59.3
+            },
+            {
+                "timestamp": "2024-04-04 16:00",
+                "cpu_usage": 86.04,
+                "memory_usage": 100,
+                "network_io": 60.75
+            },
+            {
+                "timestamp": "2024-04-04 17:00",
+                "cpu_usage": 88.37,
+                "memory_usage": 100,
+                "network_io": 61.47
+            },
+            {
+                "timestamp": "2024-04-04 18:00",
+                "cpu_usage": 89.04,
+                "memory_usage": 100,
+                "network_io": 60.33
+            },
+            {
+                "timestamp": "2024-04-04 19:00",
+                "cpu_usage": 86.97,
+                "memory_usage": 100,
+                "network_io": 60.79
+            },
+            {
+                "timestamp": "2024-04-04 20:00",
+                "cpu_usage": 88.41,
+                "memory_usage": 100,
+                "network_io": 62.32
+            },
+            {
+                "timestamp": "2024-04-04 21:00",
+                "cpu_usage": 91.13,
+                "memory_usage": 100,
+                "network_io": 63.61
+            },
+            {
+                "timestamp": "2024-04-04 22:00",
+                "cpu_usage": 88.5,
+                "memory_usage": 100,
+                "network_io": 64.12
+            },
+            {
+                "timestamp": "2024-04-04 23:00",
+                "cpu_usage": 90.83,
+                "memory_usage": 100,
+                "network_io": 64.18
+            },
+            {
+                "timestamp": "2024-04-05 00:00",
+                "cpu_usage": 92.31,
+                "memory_usage": 100,
+                "network_io": 63.07
+            },
+            {
+                "timestamp": "2024-04-05 01:00",
+                "cpu_usage": 89.14,
+                "memory_usage": 100,
+                "network_io": 64.31
+            },
+            {
+                "timestamp": "2024-04-05 02:00",
+                "cpu_usage": 93.23,
+                "memory_usage": 100,
+                "network_io": 64.37
+            },
+            {
+                "timestamp": "2024-04-05 03:00",
+                "cpu_usage": 93.78,
+                "memory_usage": 100,
+                "network_io": 65.78
+            },
+            {
+                "timestamp": "2024-04-05 04:00",
+                "cpu_usage": 93.82,
+                "memory_usage": 100,
+                "network_io": 65.57
+            },
+            {
+                "timestamp": "2024-04-05 05:00",
+                "cpu_usage": 93.45,
+                "memory_usage": 100,
+                "network_io": 66.63
+            },
+            {
+                "timestamp": "2024-04-05 06:00",
+                "cpu_usage": 95.15,
+                "memory_usage": 100,
+                "network_io": 66.31
+            },
+            {
+                "timestamp": "2024-04-05 07:00",
+                "cpu_usage": 96.18,
+                "memory_usage": 100,
+                "network_io": 67.74
+            },
+            {
+                "timestamp": "2024-04-05 08:00",
+                "cpu_usage": 94.66,
+                "memory_usage": 100,
+                "network_io": 68.53
+            },
+            {
+                "timestamp": "2024-04-05 09:00",
+                "cpu_usage": 96.73,
+                "memory_usage": 100,
+                "network_io": 68.6
+            },
+            {
+                "timestamp": "2024-04-05 10:00",
+                "cpu_usage": 98.88,
+                "memory_usage": 100,
+                "network_io": 69.37
+            },
+            {
+                "timestamp": "2024-04-05 11:00",
+                "cpu_usage": 98.93,
+                "memory_usage": 100,
+                "network_io": 68.77
+            },
+            {
+                "timestamp": "2024-04-05 12:00",
+                "cpu_usage": 97.56,
+                "memory_usage": 100,
+                "network_io": 68.71
+            },
+            {
+                "timestamp": "2024-04-05 13:00",
+                "cpu_usage": 98.41,
+                "memory_usage": 100,
+                "network_io": 69.72
+            },
+            {
+                "timestamp": "2024-04-05 14:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 70.59
+            },
+            {
+                "timestamp": "2024-04-05 15:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 70.15
+            },
+            {
+                "timestamp": "2024-04-05 16:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 71.69
+            },
+            {
+                "timestamp": "2024-04-05 17:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 72.23
+            },
+            {
+                "timestamp": "2024-04-05 18:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 71.61
+            },
+            {
+                "timestamp": "2024-04-05 19:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 71.74
+            },
+            {
+                "timestamp": "2024-04-05 20:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 72.73
+            },
+            {
+                "timestamp": "2024-04-05 21:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 73.54
+            },
+            {
+                "timestamp": "2024-04-05 22:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 73.92
+            },
+            {
+                "timestamp": "2024-04-05 23:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 75.02
+            },
+            {
+                "timestamp": "2024-04-06 00:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 74.16
+            },
+            {
+                "timestamp": "2024-04-06 01:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 76.08
+            },
+            {
+                "timestamp": "2024-04-06 02:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 75.11
+            },
+            {
+                "timestamp": "2024-04-06 03:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 76.29
+            },
+            {
+                "timestamp": "2024-04-06 04:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 76.11
+            },
+            {
+                "timestamp": "2024-04-06 05:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 77.12
+            },
+            {
+                "timestamp": "2024-04-06 06:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 78.65
+            },
+            {
+                "timestamp": "2024-04-06 07:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 79.25
+            },
+            {
+                "timestamp": "2024-04-06 08:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 78.25
+            },
+            {
+                "timestamp": "2024-04-06 09:00",
+                "cpu_usage": 100,
+                "memory_usage": 100,
+                "network_io": 79.22
+            }
+        ]
+    },
+    {
+        "case_id": "CASE002",
+        "title": "The Bank Fraud Puzzle",
+        "description": "Identify fraudulent transactions and predict future fraud.",
+        "objective": "Spot anomalies in transaction data.",
+        "tools_allowed": [
+            "Anomaly Marker",
+            "LSTM Hint"
+        ],
+        "dataset": [
+            {
+                "timestamp": "2024-04-01 09:00",
+                "transaction_amount": 373,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-01 10:00",
+                "transaction_amount": 124,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-01 11:00",
+                "transaction_amount": 290,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-01 12:00",
+                "transaction_amount": 9125,
+                "transactions_per_hour": 10
+            },
+            {
+                "timestamp": "2024-04-01 13:00",
+                "transaction_amount": 7904,
+                "transactions_per_hour": 5
+            },
+            {
+                "timestamp": "2024-04-01 14:00",
+                "transaction_amount": 466,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-01 15:00",
+                "transaction_amount": 114,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-01 16:00",
+                "transaction_amount": 420,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-01 17:00",
+                "transaction_amount": 493,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-01 18:00",
+                "transaction_amount": 156,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-01 19:00",
+                "transaction_amount": 491,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-01 20:00",
+                "transaction_amount": 372,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-01 21:00",
+                "transaction_amount": 424,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-01 22:00",
+                "transaction_amount": 166,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-01 23:00",
+                "transaction_amount": 7357,
+                "transactions_per_hour": 6
+            },
+            {
+                "timestamp": "2024-04-02 00:00",
+                "transaction_amount": 167,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-02 01:00",
+                "transaction_amount": 222,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-02 02:00",
+                "transaction_amount": 239,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-02 03:00",
+                "transaction_amount": 363,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-02 04:00",
+                "transaction_amount": 173,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-02 05:00",
+                "transaction_amount": 142,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-02 06:00",
+                "transaction_amount": 365,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-02 07:00",
+                "transaction_amount": 232,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-02 08:00",
+                "transaction_amount": 173,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-02 09:00",
+                "transaction_amount": 142,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-02 10:00",
+                "transaction_amount": 146,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-02 11:00",
+                "transaction_amount": 375,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-02 12:00",
+                "transaction_amount": 361,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-02 13:00",
+                "transaction_amount": 206,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-02 14:00",
+                "transaction_amount": 383,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-02 15:00",
+                "transaction_amount": 475,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-02 16:00",
+                "transaction_amount": 5512,
+                "transactions_per_hour": 12
+            },
+            {
+                "timestamp": "2024-04-02 17:00",
+                "transaction_amount": 174,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-02 18:00",
+                "transaction_amount": 212,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-02 19:00",
+                "transaction_amount": 385,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-02 20:00",
+                "transaction_amount": 8636,
+                "transactions_per_hour": 7
+            },
+            {
+                "timestamp": "2024-04-02 21:00",
+                "transaction_amount": 279,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-02 22:00",
+                "transaction_amount": 4102,
+                "transactions_per_hour": 7
+            },
+            {
+                "timestamp": "2024-04-02 23:00",
+                "transaction_amount": 168,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-03 00:00",
+                "transaction_amount": 370,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 01:00",
+                "transaction_amount": 168,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-03 02:00",
+                "transaction_amount": 150,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 03:00",
+                "transaction_amount": 212,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 04:00",
+                "transaction_amount": 461,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-03 05:00",
+                "transaction_amount": 300,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-03 06:00",
+                "transaction_amount": 7276,
+                "transactions_per_hour": 11
+            },
+            {
+                "timestamp": "2024-04-03 07:00",
+                "transaction_amount": 4931,
+                "transactions_per_hour": 12
+            },
+            {
+                "timestamp": "2024-04-03 08:00",
+                "transaction_amount": 494,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-03 09:00",
+                "transaction_amount": 104,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 10:00",
+                "transaction_amount": 307,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 11:00",
+                "transaction_amount": 190,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 12:00",
+                "transaction_amount": 455,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 13:00",
+                "transaction_amount": 433,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 14:00",
+                "transaction_amount": 161,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 15:00",
+                "transaction_amount": 324,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 16:00",
+                "transaction_amount": 224,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 17:00",
+                "transaction_amount": 462,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-03 18:00",
+                "transaction_amount": 127,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-03 19:00",
+                "transaction_amount": 206,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 20:00",
+                "transaction_amount": 308,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 21:00",
+                "transaction_amount": 378,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-03 22:00",
+                "transaction_amount": 215,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-03 23:00",
+                "transaction_amount": 321,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 00:00",
+                "transaction_amount": 245,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-04 01:00",
+                "transaction_amount": 305,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-04 02:00",
+                "transaction_amount": 209,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 03:00",
+                "transaction_amount": 309,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 04:00",
+                "transaction_amount": 297,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-04 05:00",
+                "transaction_amount": 383,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-04 06:00",
+                "transaction_amount": 320,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-04 07:00",
+                "transaction_amount": 344,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 08:00",
+                "transaction_amount": 321,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 09:00",
+                "transaction_amount": 448,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-04 10:00",
+                "transaction_amount": 373,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-04 11:00",
+                "transaction_amount": 148,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 12:00",
+                "transaction_amount": 239,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-04 13:00",
+                "transaction_amount": 3100,
+                "transactions_per_hour": 8
+            },
+            {
+                "timestamp": "2024-04-04 14:00",
+                "transaction_amount": 409,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 15:00",
+                "transaction_amount": 7178,
+                "transactions_per_hour": 8
+            },
+            {
+                "timestamp": "2024-04-04 16:00",
+                "transaction_amount": 338,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 17:00",
+                "transaction_amount": 3775,
+                "transactions_per_hour": 6
+            },
+            {
+                "timestamp": "2024-04-04 18:00",
+                "transaction_amount": 462,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 19:00",
+                "transaction_amount": 300,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-04 20:00",
+                "transaction_amount": 126,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 21:00",
+                "transaction_amount": 165,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-04 22:00",
+                "transaction_amount": 286,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-04 23:00",
+                "transaction_amount": 334,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-05 00:00",
+                "transaction_amount": 384,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 01:00",
+                "transaction_amount": 174,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 02:00",
+                "transaction_amount": 144,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-05 03:00",
+                "transaction_amount": 109,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-05 04:00",
+                "transaction_amount": 173,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 05:00",
+                "transaction_amount": 332,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-05 06:00",
+                "transaction_amount": 279,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 07:00",
+                "transaction_amount": 119,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-05 08:00",
+                "transaction_amount": 500,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-05 09:00",
+                "transaction_amount": 194,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-05 10:00",
+                "transaction_amount": 138,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 11:00",
+                "transaction_amount": 229,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-05 12:00",
+                "transaction_amount": 6142,
+                "transactions_per_hour": 10
+            },
+            {
+                "timestamp": "2024-04-05 13:00",
+                "transaction_amount": 290,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 14:00",
+                "transaction_amount": 128,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 15:00",
+                "transaction_amount": 105,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 16:00",
+                "transaction_amount": 164,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-05 17:00",
+                "transaction_amount": 345,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-05 18:00",
+                "transaction_amount": 405,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-05 19:00",
+                "transaction_amount": 116,
+                "transactions_per_hour": 1
+            },
+            {
+                "timestamp": "2024-04-05 20:00",
+                "transaction_amount": 363,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-05 21:00",
+                "transaction_amount": 443,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-05 22:00",
+                "transaction_amount": 365,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-05 23:00",
+                "transaction_amount": 300,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-06 00:00",
+                "transaction_amount": 481,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-06 01:00",
+                "transaction_amount": 211,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-06 02:00",
+                "transaction_amount": 240,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-06 03:00",
+                "transaction_amount": 300,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-06 04:00",
+                "transaction_amount": 360,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-06 05:00",
+                "transaction_amount": 240,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-06 06:00",
+                "transaction_amount": 113,
+                "transactions_per_hour": 3
+            },
+            {
+                "timestamp": "2024-04-06 07:00",
+                "transaction_amount": 445,
+                "transactions_per_hour": 2
+            },
+            {
+                "timestamp": "2024-04-06 08:00",
+                "transaction_amount": 9060,
+                "transactions_per_hour": 5
+            }
+        ]
+    },
+    {
+        "case_id": "CASE003",
+        "title": "IoT Device Failure Forecast",
+        "description": "Predict which IoT sensor will fail based on patterns.",
+        "objective": "Preventive maintenance using time series data.",
+        "tools_allowed": [
+            "Forecast Predictor",
+            "LSTM Hint"
+        ],
+        "dataset": [
+            {
+                "timestamp": "2024-04-01 08:00",
+                "temperature": 25.86,
+                "humidity": 53.56,
+                "energy_usage": 13.6
+            },
+            {
+                "timestamp": "2024-04-01 09:00",
+                "temperature": 25.57,
+                "humidity": 50.39,
+                "energy_usage": 18.29
+            },
+            {
+                "timestamp": "2024-04-01 10:00",
+                "temperature": 21.67,
+                "humidity": 44.63,
+                "energy_usage": 6.35
+            },
+            {
+                "timestamp": "2024-04-01 11:00",
+                "temperature": 18.59,
+                "humidity": 50.51,
+                "energy_usage": 14.5
+            },
+            {
+                "timestamp": "2024-04-01 12:00",
+                "temperature": 27.24,
+                "humidity": 51.12,
+                "energy_usage": 18.01
+            },
+            {
+                "timestamp": "2024-04-01 13:00",
+                "temperature": 23.01,
+                "humidity": 53.82,
+                "energy_usage": 11.58
+            },
+            {
+                "timestamp": "2024-04-01 14:00",
+                "temperature": 27.26,
+                "humidity": 50.28,
+                "energy_usage": 14.28
+            },
+            {
+                "timestamp": "2024-04-01 15:00",
+                "temperature": 26.21,
+                "humidity": 45.38,
+                "energy_usage": 17.42
+            },
+            {
+                "timestamp": "2024-04-01 16:00",
+                "temperature": 21.82,
+                "humidity": 59.26,
+                "energy_usage": 17.07
+            },
+            {
+                "timestamp": "2024-04-01 17:00",
+                "temperature": 26.77,
+                "humidity": 46.55,
+                "energy_usage": 15.56
+            },
+            {
+                "timestamp": "2024-04-01 18:00",
+                "temperature": 18.07,
+                "humidity": 47.11,
+                "energy_usage": 15.19
+            },
+            {
+                "timestamp": "2024-04-01 19:00",
+                "temperature": 23.14,
+                "humidity": 50.6,
+                "energy_usage": 11.17
+            },
+            {
+                "timestamp": "2024-04-01 20:00",
+                "temperature": 26.09,
+                "humidity": 46.52,
+                "energy_usage": 14.02
+            },
+            {
+                "timestamp": "2024-04-01 21:00",
+                "temperature": 25.49,
+                "humidity": 49.49,
+                "energy_usage": 18.33
+            },
+            {
+                "timestamp": "2024-04-01 22:00",
+                "temperature": 23.1,
+                "humidity": 49.13,
+                "energy_usage": 14.8
+            },
+            {
+                "timestamp": "2024-04-01 23:00",
+                "temperature": 26.94,
+                "humidity": 54.72,
+                "energy_usage": 19.1
+            },
+            {
+                "timestamp": "2024-04-02 00:00",
+                "temperature": 27.74,
+                "humidity": 45.4,
+                "energy_usage": 16.96
+            },
+            {
+                "timestamp": "2024-04-02 01:00",
+                "temperature": 24.74,
+                "humidity": 51.52,
+                "energy_usage": 11.78
+            },
+            {
+                "timestamp": "2024-04-02 02:00",
+                "temperature": 26.41,
+                "humidity": 49.86,
+                "energy_usage": 11.12
+            },
+            {
+                "timestamp": "2024-04-02 03:00",
+                "temperature": 19.37,
+                "humidity": 46.62,
+                "energy_usage": 14.44
+            },
+            {
+                "timestamp": "2024-04-02 04:00",
+                "temperature": 38.29,
+                "humidity": 60.38,
+                "energy_usage": 24.99
+            },
+            {
+                "timestamp": "2024-04-02 05:00",
+                "temperature": 25.7,
+                "humidity": 61.36,
+                "energy_usage": 16.04
+            },
+            {
+                "timestamp": "2024-04-02 06:00",
+                "temperature": 27.69,
+                "humidity": 53.23,
+                "energy_usage": 14.99
+            },
+            {
+                "timestamp": "2024-04-02 07:00",
+                "temperature": 23.93,
+                "humidity": 47.31,
+                "energy_usage": 17.26
+            },
+            {
+                "timestamp": "2024-04-02 08:00",
+                "temperature": 29.36,
+                "humidity": 49.24,
+                "energy_usage": 21.46
+            },
+            {
+                "timestamp": "2024-04-02 09:00",
+                "temperature": 25.33,
+                "humidity": 52.46,
+                "energy_usage": 16.17
+            },
+            {
+                "timestamp": "2024-04-02 10:00",
+                "temperature": 26.01,
+                "humidity": 47.27,
+                "energy_usage": 13.53
+            },
+            {
+                "timestamp": "2024-04-02 11:00",
+                "temperature": 20.26,
+                "humidity": 55.56,
+                "energy_usage": 20.43
+            },
+            {
+                "timestamp": "2024-04-02 12:00",
+                "temperature": 25.92,
+                "humidity": 54.3,
+                "energy_usage": 16.82
+            },
+            {
+                "timestamp": "2024-04-02 13:00",
+                "temperature": 24.32,
+                "humidity": 51.8,
+                "energy_usage": 16.74
+            },
+            {
+                "timestamp": "2024-04-02 14:00",
+                "temperature": 33.02,
+                "humidity": 52.88,
+                "energy_usage": 10.0
+            },
+            {
+                "timestamp": "2024-04-02 15:00",
+                "temperature": 24.49,
+                "humidity": 51.27,
+                "energy_usage": 13.75
+            },
+            {
+                "timestamp": "2024-04-02 16:00",
+                "temperature": 28.19,
+                "humidity": 56.7,
+                "energy_usage": 11.58
+            },
+            {
+                "timestamp": "2024-04-02 17:00",
+                "temperature": 26.87,
+                "humidity": 57.91,
+                "energy_usage": 14.86
+            },
+            {
+                "timestamp": "2024-04-02 18:00",
+                "temperature": 23.29,
+                "humidity": 55.21,
+                "energy_usage": 22.31
+            },
+            {
+                "timestamp": "2024-04-02 19:00",
+                "temperature": 27.87,
+                "humidity": 54.13,
+                "energy_usage": 10.14
+            },
+            {
+                "timestamp": "2024-04-02 20:00",
+                "temperature": 26.41,
+                "humidity": 57.14,
+                "energy_usage": 19.94
+            },
+            {
+                "timestamp": "2024-04-02 21:00",
+                "temperature": 24.14,
+                "humidity": 51.71,
+                "energy_usage": 17.74
+            },
+            {
+                "timestamp": "2024-04-02 22:00",
+                "temperature": 25.12,
+                "humidity": 53.76,
+                "energy_usage": 14.19
+            },
+            {
+                "timestamp": "2024-04-02 23:00",
+                "temperature": 25.53,
+                "humidity": 54.74,
+                "energy_usage": 16.45
+            },
+            {
+                "timestamp": "2024-04-03 00:00",
+                "temperature": 27.15,
+                "humidity": 47.48,
+                "energy_usage": 16.27
+            },
+            {
+                "timestamp": "2024-04-03 01:00",
+                "temperature": 24.06,
+                "humidity": 59.05,
+                "energy_usage": 15.24
+            },
+            {
+                "timestamp": "2024-04-03 02:00",
+                "temperature": 26.63,
+                "humidity": 51.54,
+                "energy_usage": 16.15
+            },
+            {
+                "timestamp": "2024-04-03 03:00",
+                "temperature": 20.56,
+                "humidity": 43.54,
+                "energy_usage": 16.38
+            },
+            {
+                "timestamp": "2024-04-03 04:00",
+                "temperature": 25.47,
+                "humidity": 51.35,
+                "energy_usage": 9.28
+            },
+            {
+                "timestamp": "2024-04-03 05:00",
+                "temperature": 20.11,
+                "humidity": 52.5,
+                "energy_usage": 14.91
+            },
+            {
+                "timestamp": "2024-04-03 06:00",
+                "temperature": 23.2,
+                "humidity": 56.5,
+                "energy_usage": 12.86
+            },
+            {
+                "timestamp": "2024-04-03 07:00",
+                "temperature": 32.34,
+                "humidity": 51.16,
+                "energy_usage": 16.49
+            },
+            {
+                "timestamp": "2024-04-03 08:00",
+                "temperature": 25.17,
+                "humidity": 47.28,
+                "energy_usage": 14.39
+            },
+            {
+                "timestamp": "2024-04-03 09:00",
+                "temperature": 26.8,
+                "humidity": 45.21,
+                "energy_usage": 13.94
+            },
+            {
+                "timestamp": "2024-04-03 10:00",
+                "temperature": 23.58,
+                "humidity": 43.11,
+                "energy_usage": 19.26
+            },
+            {
+                "timestamp": "2024-04-03 11:00",
+                "temperature": 26.43,
+                "humidity": 49.83,
+                "energy_usage": 18.25
+            },
+            {
+                "timestamp": "2024-04-03 12:00",
+                "temperature": 28.16,
+                "humidity": 45.99,
+                "energy_usage": 12.11
+            },
+            {
+                "timestamp": "2024-04-03 13:00",
+                "temperature": 22.45,
+                "humidity": 56.93,
+                "energy_usage": 11.53
+            },
+            {
+                "timestamp": "2024-04-03 14:00",
+                "temperature": 28.44,
+                "humidity": 43.83,
+                "energy_usage": 13.59
+            },
+            {
+                "timestamp": "2024-04-03 15:00",
+                "temperature": 29.14,
+                "humidity": 48.76,
+                "energy_usage": 21.58
+            },
+            {
+                "timestamp": "2024-04-03 16:00",
+                "temperature": 29.56,
+                "humidity": 50.91,
+                "energy_usage": 11.54
+            },
+            {
+                "timestamp": "2024-04-03 17:00",
+                "temperature": 27.53,
+                "humidity": 50.07,
+                "energy_usage": 20.0
+            },
+            {
+                "timestamp": "2024-04-03 18:00",
+                "temperature": 25.5,
+                "humidity": 52.74,
+                "energy_usage": 14.51
+            },
+            {
+                "timestamp": "2024-04-03 19:00",
+                "temperature": 25.53,
+                "humidity": 45.45,
+                "energy_usage": 15.6
+            },
+            {
+                "timestamp": "2024-04-03 20:00",
+                "temperature": 23.09,
+                "humidity": 44.02,
+                "energy_usage": 12.17
+            },
+            {
+                "timestamp": "2024-04-03 21:00",
+                "temperature": 21.56,
+                "humidity": 54.61,
+                "energy_usage": 13.31
+            },
+            {
+                "timestamp": "2024-04-03 22:00",
+                "temperature": 25.51,
+                "humidity": 50.93,
+                "energy_usage": 18.99
+            },
+            {
+                "timestamp": "2024-04-03 23:00",
+                "temperature": 24.77,
+                "humidity": 45.0,
+                "energy_usage": 11.24
+            },
+            {
+                "timestamp": "2024-04-04 00:00",
+                "temperature": 24.61,
+                "humidity": 46.12,
+                "energy_usage": 16.46
+            },
+            {
+                "timestamp": "2024-04-04 01:00",
+                "temperature": 29.48,
+                "humidity": 49.51,
+                "energy_usage": 23.61
+            },
+            {
+                "timestamp": "2024-04-04 02:00",
+                "temperature": 25.8,
+                "humidity": 55.55,
+                "energy_usage": 10.27
+            },
+            {
+                "timestamp": "2024-04-04 03:00",
+                "temperature": 18.45,
+                "humidity": 48.63,
+                "energy_usage": 8.11
+            },
+            {
+                "timestamp": "2024-04-04 04:00",
+                "temperature": 25.99,
+                "humidity": 47.35,
+                "energy_usage": 10.5
+            },
+            {
+                "timestamp": "2024-04-04 05:00",
+                "temperature": 26.3,
+                "humidity": 52.37,
+                "energy_usage": 20.51
+            },
+            {
+                "timestamp": "2024-04-04 06:00",
+                "temperature": 24.85,
+                "humidity": 52.16,
+                "energy_usage": 11.54
+            },
+            {
+                "timestamp": "2024-04-04 07:00",
+                "temperature": 23.75,
+                "humidity": 45.16,
+                "energy_usage": 14.71
+            },
+            {
+                "timestamp": "2024-04-04 08:00",
+                "temperature": 23.8,
+                "humidity": 55.8,
+                "energy_usage": 13.34
+            },
+            {
+                "timestamp": "2024-04-04 09:00",
+                "temperature": 30.44,
+                "humidity": 59.59,
+                "energy_usage": 23.46
+            },
+            {
+                "timestamp": "2024-04-04 10:00",
+                "temperature": 18.55,
+                "humidity": 55.23,
+                "energy_usage": 11.99
+            },
+            {
+                "timestamp": "2024-04-04 11:00",
+                "temperature": 23.42,
+                "humidity": 52.23,
+                "energy_usage": 15.18
+            },
+            {
+                "timestamp": "2024-04-04 12:00",
+                "temperature": 19.16,
+                "humidity": 52.68,
+                "energy_usage": 2.45
+            },
+            {
+                "timestamp": "2024-04-04 13:00",
+                "temperature": 23.84,
+                "humidity": 54.39,
+                "energy_usage": 19.8
+            },
+            {
+                "timestamp": "2024-04-04 14:00",
+                "temperature": 22.96,
+                "humidity": 54.06,
+                "energy_usage": 18.39
+            },
+            {
+                "timestamp": "2024-04-04 15:00",
+                "temperature": 23.72,
+                "humidity": 52.87,
+                "energy_usage": 22.03
+            },
+            {
+                "timestamp": "2024-04-04 16:00",
+                "temperature": 33.39,
+                "humidity": 61.44,
+                "energy_usage": 4.61
+            },
+            {
+                "timestamp": "2024-04-04 17:00",
+                "temperature": 28.73,
+                "humidity": 53.14,
+                "energy_usage": 12.95
+            },
+            {
+                "timestamp": "2024-04-04 18:00",
+                "temperature": 28.26,
+                "humidity": 42.49,
+                "energy_usage": 11.93
+            },
+            {
+                "timestamp": "2024-04-04 19:00",
+                "temperature": 28.4,
+                "humidity": 48.02,
+                "energy_usage": 27.03
+            },
+            {
+                "timestamp": "2024-04-04 20:00",
+                "temperature": 22.02,
+                "humidity": 46.66,
+                "energy_usage": 10.7
+            },
+            {
+                "timestamp": "2024-04-04 21:00",
+                "temperature": 25.57,
+                "humidity": 51.15,
+                "energy_usage": 18.25
+            },
+            {
+                "timestamp": "2024-04-04 22:00",
+                "temperature": 21.2,
+                "humidity": 46.19,
+                "energy_usage": 24.01
+            },
+            {
+                "timestamp": "2024-04-04 23:00",
+                "temperature": 21.67,
+                "humidity": 42.76,
+                "energy_usage": 16.66
+            },
+            {
+                "timestamp": "2024-04-05 00:00",
+                "temperature": 21.54,
+                "humidity": 55.59,
+                "energy_usage": 8.99
+            },
+            {
+                "timestamp": "2024-04-05 01:00",
+                "temperature": 16.31,
+                "humidity": 45.83,
+                "energy_usage": 9.3
+            },
+            {
+                "timestamp": "2024-04-05 02:00",
+                "temperature": 26.55,
+                "humidity": 49.52,
+                "energy_usage": 11.87
+            },
+            {
+                "timestamp": "2024-04-05 03:00",
+                "temperature": 26.88,
+                "humidity": 51.74,
+                "energy_usage": 14.45
+            },
+            {
+                "timestamp": "2024-04-05 04:00",
+                "temperature": 35.91,
+                "humidity": 54.35,
+                "energy_usage": 36.49
+            },
+            {
+                "timestamp": "2024-04-05 05:00",
+                "temperature": 29.73,
+                "humidity": 46.55,
+                "energy_usage": 13.43
+            },
+            {
+                "timestamp": "2024-04-05 06:00",
+                "temperature": 26.48,
+                "humidity": 46.42,
+                "energy_usage": 14.61
+            },
+            {
+                "timestamp": "2024-04-05 07:00",
+                "temperature": 30.8,
+                "humidity": 55.32,
+                "energy_usage": 22.34
+            },
+            {
+                "timestamp": "2024-04-05 08:00",
+                "temperature": 25.37,
+                "humidity": 44.64,
+                "energy_usage": 12.96
+            },
+            {
+                "timestamp": "2024-04-05 09:00",
+                "temperature": 21.18,
+                "humidity": 52.22,
+                "energy_usage": 13.12
+            },
+            {
+                "timestamp": "2024-04-05 10:00",
+                "temperature": 24.97,
+                "humidity": 48.8,
+                "energy_usage": 18.55
+            },
+            {
+                "timestamp": "2024-04-05 11:00",
+                "temperature": 21.0,
+                "humidity": 46.37,
+                "energy_usage": 16.68
+            },
+            {
+                "timestamp": "2024-04-05 12:00",
+                "temperature": 30.28,
+                "humidity": 43.52,
+                "energy_usage": 17.16
+            },
+            {
+                "timestamp": "2024-04-05 13:00",
+                "temperature": 24.84,
+                "humidity": 54.1,
+                "energy_usage": 18.58
+            },
+            {
+                "timestamp": "2024-04-05 14:00",
+                "temperature": 25.05,
+                "humidity": 49.59,
+                "energy_usage": 11.76
+            },
+            {
+                "timestamp": "2024-04-05 15:00",
+                "temperature": 28.11,
+                "humidity": 43.91,
+                "energy_usage": 16.69
+            },
+            {
+                "timestamp": "2024-04-05 16:00",
+                "temperature": 22.4,
+                "humidity": 51.86,
+                "energy_usage": 13.17
+            },
+            {
+                "timestamp": "2024-04-05 17:00",
+                "temperature": 24.31,
+                "humidity": 52.58,
+                "energy_usage": 7.97
+            },
+            {
+                "timestamp": "2024-04-05 18:00",
+                "temperature": 26.14,
+                "humidity": 56.26,
+                "energy_usage": 20.13
+            },
+            {
+                "timestamp": "2024-04-05 19:00",
+                "temperature": 22.74,
+                "humidity": 53.59,
+                "energy_usage": 17.84
+            },
+            {
+                "timestamp": "2024-04-05 20:00",
+                "temperature": 21.41,
+                "humidity": 46.35,
+                "energy_usage": 20.33
+            },
+            {
+                "timestamp": "2024-04-05 21:00",
+                "temperature": 23.42,
+                "humidity": 56.15,
+                "energy_usage": 6.73
+            },
+            {
+                "timestamp": "2024-04-05 22:00",
+                "temperature": 25.61,
+                "humidity": 54.14,
+                "energy_usage": 13.96
+            },
+            {
+                "timestamp": "2024-04-05 23:00",
+                "temperature": 27.87,
+                "humidity": 43.83,
+                "energy_usage": 14.36
+            },
+            {
+                "timestamp": "2024-04-06 00:00",
+                "temperature": 25.02,
+                "humidity": 44.19,
+                "energy_usage": 17.49
+            },
+            {
+                "timestamp": "2024-04-06 01:00",
+                "temperature": 25.29,
+                "humidity": 50.56,
+                "energy_usage": 18.25
+            },
+            {
+                "timestamp": "2024-04-06 02:00",
+                "temperature": 27.33,
+                "humidity": 41.88,
+                "energy_usage": 10.1
+            },
+            {
+                "timestamp": "2024-04-06 03:00",
+                "temperature": 26.45,
+                "humidity": 45.38,
+                "energy_usage": 15.58
+            },
+            {
+                "timestamp": "2024-04-06 04:00",
+                "temperature": 22.66,
+                "humidity": 52.5,
+                "energy_usage": 11.59
+            },
+            {
+                "timestamp": "2024-04-06 05:00",
+                "temperature": 24.63,
+                "humidity": 52.02,
+                "energy_usage": 11.59
+            },
+            {
+                "timestamp": "2024-04-06 06:00",
+                "temperature": 26.66,
+                "humidity": 43.4,
+                "energy_usage": 10.19
+            },
+            {
+                "timestamp": "2024-04-06 07:00",
+                "temperature": 20.21,
+                "humidity": 52.78,
+                "energy_usage": 16.17
+            }
+        ]
+    },
+    {
+        "case_id": "CASE004",
+        "title": "DDoS Attack Detection",
+        "description": "Detect early signs of a DDoS attack.",
+        "objective": "Protect the server by identifying abnormal traffic patterns.",
+        "tools_allowed": [
+            "Anomaly Marker",
+            "LSTM Hint"
+        ],
+        "dataset": [
+            {
+                "timestamp": "2024-04-01 10:00",
+                "requests_per_second": 613,
+                "unique_ips": 315
+            },
+            {
+                "timestamp": "2024-04-01 10:05",
+                "requests_per_second": 609,
+                "unique_ips": 765
+            },
+            {
+                "timestamp": "2024-04-01 10:10",
+                "requests_per_second": 165,
+                "unique_ips": 79
+            },
+            {
+                "timestamp": "2024-04-01 10:15",
+                "requests_per_second": 132,
+                "unique_ips": 63
+            },
+            {
+                "timestamp": "2024-04-01 10:20",
+                "requests_per_second": 1027,
+                "unique_ips": 371
+            },
+            {
+                "timestamp": "2024-04-01 10:25",
+                "requests_per_second": 156,
+                "unique_ips": 97
+            },
+            {
+                "timestamp": "2024-04-01 10:30",
+                "requests_per_second": 1930,
+                "unique_ips": 825
+            },
+            {
+                "timestamp": "2024-04-01 10:35",
+                "requests_per_second": 172,
+                "unique_ips": 100
+            },
+            {
+                "timestamp": "2024-04-01 10:40",
+                "requests_per_second": 124,
+                "unique_ips": 59
+            },
+            {
+                "timestamp": "2024-04-01 10:45",
+                "requests_per_second": 109,
+                "unique_ips": 55
+            },
+            {
+                "timestamp": "2024-04-01 10:50",
+                "requests_per_second": 104,
+                "unique_ips": 60
+            },
+            {
+                "timestamp": "2024-04-01 10:55",
+                "requests_per_second": 118,
+                "unique_ips": 74
+            },
+            {
+                "timestamp": "2024-04-01 11:00",
+                "requests_per_second": 188,
+                "unique_ips": 86
+            },
+            {
+                "timestamp": "2024-04-01 11:05",
+                "requests_per_second": 134,
+                "unique_ips": 73
+            },
+            {
+                "timestamp": "2024-04-01 11:10",
+                "requests_per_second": 182,
+                "unique_ips": 73
+            },
+            {
+                "timestamp": "2024-04-01 11:15",
+                "requests_per_second": 152,
+                "unique_ips": 53
+            },
+            {
+                "timestamp": "2024-04-01 11:20",
+                "requests_per_second": 111,
+                "unique_ips": 95
+            },
+            {
+                "timestamp": "2024-04-01 11:25",
+                "requests_per_second": 619,
+                "unique_ips": 690
+            },
+            {
+                "timestamp": "2024-04-01 11:30",
+                "requests_per_second": 128,
+                "unique_ips": 77
+            },
+            {
+                "timestamp": "2024-04-01 11:35",
+                "requests_per_second": 1343,
+                "unique_ips": 966
+            },
+            {
+                "timestamp": "2024-04-01 11:40",
+                "requests_per_second": 139,
+                "unique_ips": 55
+            },
+            {
+                "timestamp": "2024-04-01 11:45",
+                "requests_per_second": 126,
+                "unique_ips": 80
+            },
+            {
+                "timestamp": "2024-04-01 11:50",
+                "requests_per_second": 187,
+                "unique_ips": 90
+            },
+            {
+                "timestamp": "2024-04-01 11:55",
+                "requests_per_second": 165,
+                "unique_ips": 95
+            },
+            {
+                "timestamp": "2024-04-01 12:00",
+                "requests_per_second": 105,
+                "unique_ips": 55
+            },
+            {
+                "timestamp": "2024-04-01 12:05",
+                "requests_per_second": 1489,
+                "unique_ips": 342
+            },
+            {
+                "timestamp": "2024-04-01 12:10",
+                "requests_per_second": 104,
+                "unique_ips": 68
+            },
+            {
+                "timestamp": "2024-04-01 12:15",
+                "requests_per_second": 162,
+                "unique_ips": 87
+            },
+            {
+                "timestamp": "2024-04-01 12:20",
+                "requests_per_second": 191,
+                "unique_ips": 67
+            },
+            {
+                "timestamp": "2024-04-01 12:25",
+                "requests_per_second": 171,
+                "unique_ips": 91
+            },
+            {
+                "timestamp": "2024-04-01 12:30",
+                "requests_per_second": 175,
+                "unique_ips": 62
+            },
+            {
+                "timestamp": "2024-04-01 12:35",
+                "requests_per_second": 140,
+                "unique_ips": 54
+            },
+            {
+                "timestamp": "2024-04-01 12:40",
+                "requests_per_second": 117,
+                "unique_ips": 90
+            },
+            {
+                "timestamp": "2024-04-01 12:45",
+                "requests_per_second": 135,
+                "unique_ips": 71
+            },
+            {
+                "timestamp": "2024-04-01 12:50",
+                "requests_per_second": 1912,
+                "unique_ips": 829
+            },
+            {
+                "timestamp": "2024-04-01 12:55",
+                "requests_per_second": 147,
+                "unique_ips": 87
+            },
+            {
+                "timestamp": "2024-04-01 13:00",
+                "requests_per_second": 1533,
+                "unique_ips": 792
+            },
+            {
+                "timestamp": "2024-04-01 13:05",
+                "requests_per_second": 130,
+                "unique_ips": 58
+            },
+            {
+                "timestamp": "2024-04-01 13:10",
+                "requests_per_second": 143,
+                "unique_ips": 95
+            },
+            {
+                "timestamp": "2024-04-01 13:15",
+                "requests_per_second": 135,
+                "unique_ips": 93
+            },
+            {
+                "timestamp": "2024-04-01 13:20",
+                "requests_per_second": 191,
+                "unique_ips": 93
+            },
+            {
+                "timestamp": "2024-04-01 13:25",
+                "requests_per_second": 196,
+                "unique_ips": 78
+            },
+            {
+                "timestamp": "2024-04-01 13:30",
+                "requests_per_second": 1242,
+                "unique_ips": 361
+            },
+            {
+                "timestamp": "2024-04-01 13:35",
+                "requests_per_second": 165,
+                "unique_ips": 59
+            },
+            {
+                "timestamp": "2024-04-01 13:40",
+                "requests_per_second": 112,
+                "unique_ips": 53
+            },
+            {
+                "timestamp": "2024-04-01 13:45",
+                "requests_per_second": 148,
+                "unique_ips": 52
+            },
+            {
+                "timestamp": "2024-04-01 13:50",
+                "requests_per_second": 198,
+                "unique_ips": 82
+            },
+            {
+                "timestamp": "2024-04-01 13:55",
+                "requests_per_second": 156,
+                "unique_ips": 76
+            },
+            {
+                "timestamp": "2024-04-01 14:00",
+                "requests_per_second": 678,
+                "unique_ips": 770
+            },
+            {
+                "timestamp": "2024-04-01 14:05",
+                "requests_per_second": 164,
+                "unique_ips": 58
+            },
+            {
+                "timestamp": "2024-04-01 14:10",
+                "requests_per_second": 133,
+                "unique_ips": 65
+            },
+            {
+                "timestamp": "2024-04-01 14:15",
+                "requests_per_second": 152,
+                "unique_ips": 83
+            },
+            {
+                "timestamp": "2024-04-01 14:20",
+                "requests_per_second": 153,
+                "unique_ips": 86
+            },
+            {
+                "timestamp": "2024-04-01 14:25",
+                "requests_per_second": 178,
+                "unique_ips": 77
+            },
+            {
+                "timestamp": "2024-04-01 14:30",
+                "requests_per_second": 130,
+                "unique_ips": 72
+            },
+            {
+                "timestamp": "2024-04-01 14:35",
+                "requests_per_second": 152,
+                "unique_ips": 60
+            },
+            {
+                "timestamp": "2024-04-01 14:40",
+                "requests_per_second": 143,
+                "unique_ips": 97
+            },
+            {
+                "timestamp": "2024-04-01 14:45",
+                "requests_per_second": 194,
+                "unique_ips": 96
+            },
+            {
+                "timestamp": "2024-04-01 14:50",
+                "requests_per_second": 143,
+                "unique_ips": 64
+            },
+            {
+                "timestamp": "2024-04-01 14:55",
+                "requests_per_second": 164,
+                "unique_ips": 70
+            },
+            {
+                "timestamp": "2024-04-01 15:00",
+                "requests_per_second": 111,
+                "unique_ips": 72
+            },
+            {
+                "timestamp": "2024-04-01 15:05",
+                "requests_per_second": 144,
+                "unique_ips": 60
+            },
+            {
+                "timestamp": "2024-04-01 15:10",
+                "requests_per_second": 174,
+                "unique_ips": 83
+            },
+            {
+                "timestamp": "2024-04-01 15:15",
+                "requests_per_second": 132,
+                "unique_ips": 70
+            },
+            {
+                "timestamp": "2024-04-01 15:20",
+                "requests_per_second": 175,
+                "unique_ips": 77
+            },
+            {
+                "timestamp": "2024-04-01 15:25",
+                "requests_per_second": 946,
+                "unique_ips": 711
+            },
+            {
+                "timestamp": "2024-04-01 15:30",
+                "requests_per_second": 115,
+                "unique_ips": 61
+            },
+            {
+                "timestamp": "2024-04-01 15:35",
+                "requests_per_second": 145,
+                "unique_ips": 57
+            },
+            {
+                "timestamp": "2024-04-01 15:40",
+                "requests_per_second": 173,
+                "unique_ips": 86
+            },
+            {
+                "timestamp": "2024-04-01 15:45",
+                "requests_per_second": 127,
+                "unique_ips": 83
+            },
+            {
+                "timestamp": "2024-04-01 15:50",
+                "requests_per_second": 198,
+                "unique_ips": 64
+            },
+            {
+                "timestamp": "2024-04-01 15:55",
+                "requests_per_second": 1451,
+                "unique_ips": 769
+            },
+            {
+                "timestamp": "2024-04-01 16:00",
+                "requests_per_second": 196,
+                "unique_ips": 95
+            },
+            {
+                "timestamp": "2024-04-01 16:05",
+                "requests_per_second": 129,
+                "unique_ips": 84
+            },
+            {
+                "timestamp": "2024-04-01 16:10",
+                "requests_per_second": 147,
+                "unique_ips": 92
+            },
+            {
+                "timestamp": "2024-04-01 16:15",
+                "requests_per_second": 151,
+                "unique_ips": 51
+            },
+            {
+                "timestamp": "2024-04-01 16:20",
+                "requests_per_second": 164,
+                "unique_ips": 56
+            },
+            {
+                "timestamp": "2024-04-01 16:25",
+                "requests_per_second": 130,
+                "unique_ips": 89
+            },
+            {
+                "timestamp": "2024-04-01 16:30",
+                "requests_per_second": 127,
+                "unique_ips": 58
+            },
+            {
+                "timestamp": "2024-04-01 16:35",
+                "requests_per_second": 172,
+                "unique_ips": 72
+            },
+            {
+                "timestamp": "2024-04-01 16:40",
+                "requests_per_second": 155,
+                "unique_ips": 89
+            },
+            {
+                "timestamp": "2024-04-01 16:45",
+                "requests_per_second": 139,
+                "unique_ips": 53
+            },
+            {
+                "timestamp": "2024-04-01 16:50",
+                "requests_per_second": 189,
+                "unique_ips": 53
+            },
+            {
+                "timestamp": "2024-04-01 16:55",
+                "requests_per_second": 194,
+                "unique_ips": 92
+            },
+            {
+                "timestamp": "2024-04-01 17:00",
+                "requests_per_second": 161,
+                "unique_ips": 59
+            },
+            {
+                "timestamp": "2024-04-01 17:05",
+                "requests_per_second": 189,
+                "unique_ips": 63
+            },
+            {
+                "timestamp": "2024-04-01 17:10",
+                "requests_per_second": 137,
+                "unique_ips": 59
+            },
+            {
+                "timestamp": "2024-04-01 17:15",
+                "requests_per_second": 138,
+                "unique_ips": 96
+            },
+            {
+                "timestamp": "2024-04-01 17:20",
+                "requests_per_second": 175,
+                "unique_ips": 98
+            },
+            {
+                "timestamp": "2024-04-01 17:25",
+                "requests_per_second": 192,
+                "unique_ips": 57
+            },
+            {
+                "timestamp": "2024-04-01 17:30",
+                "requests_per_second": 177,
+                "unique_ips": 80
+            },
+            {
+                "timestamp": "2024-04-01 17:35",
+                "requests_per_second": 137,
+                "unique_ips": 95
+            },
+            {
+                "timestamp": "2024-04-01 17:40",
+                "requests_per_second": 173,
+                "unique_ips": 62
+            },
+            {
+                "timestamp": "2024-04-01 17:45",
+                "requests_per_second": 156,
+                "unique_ips": 96
+            },
+            {
+                "timestamp": "2024-04-01 17:50",
+                "requests_per_second": 746,
+                "unique_ips": 683
+            },
+            {
+                "timestamp": "2024-04-01 17:55",
+                "requests_per_second": 178,
+                "unique_ips": 57
+            },
+            {
+                "timestamp": "2024-04-01 18:00",
+                "requests_per_second": 1363,
+                "unique_ips": 326
+            },
+            {
+                "timestamp": "2024-04-01 18:05",
+                "requests_per_second": 962,
+                "unique_ips": 779
+            },
+            {
+                "timestamp": "2024-04-01 18:10",
+                "requests_per_second": 111,
+                "unique_ips": 86
+            },
+            {
+                "timestamp": "2024-04-01 18:15",
+                "requests_per_second": 111,
+                "unique_ips": 80
+            },
+            {
+                "timestamp": "2024-04-01 18:20",
+                "requests_per_second": 106,
+                "unique_ips": 75
+            },
+            {
+                "timestamp": "2024-04-01 18:25",
+                "requests_per_second": 138,
+                "unique_ips": 98
+            },
+            {
+                "timestamp": "2024-04-01 18:30",
+                "requests_per_second": 158,
+                "unique_ips": 64
+            },
+            {
+                "timestamp": "2024-04-01 18:35",
+                "requests_per_second": 161,
+                "unique_ips": 97
+            },
+            {
+                "timestamp": "2024-04-01 18:40",
+                "requests_per_second": 116,
+                "unique_ips": 50
+            },
+            {
+                "timestamp": "2024-04-01 18:45",
+                "requests_per_second": 152,
+                "unique_ips": 100
+            },
+            {
+                "timestamp": "2024-04-01 18:50",
+                "requests_per_second": 160,
+                "unique_ips": 85
+            },
+            {
+                "timestamp": "2024-04-01 18:55",
+                "requests_per_second": 141,
+                "unique_ips": 85
+            },
+            {
+                "timestamp": "2024-04-01 19:00",
+                "requests_per_second": 124,
+                "unique_ips": 64
+            },
+            {
+                "timestamp": "2024-04-01 19:05",
+                "requests_per_second": 191,
+                "unique_ips": 77
+            },
+            {
+                "timestamp": "2024-04-01 19:10",
+                "requests_per_second": 180,
+                "unique_ips": 84
+            },
+            {
+                "timestamp": "2024-04-01 19:15",
+                "requests_per_second": 575,
+                "unique_ips": 654
+            },
+            {
+                "timestamp": "2024-04-01 19:20",
+                "requests_per_second": 142,
+                "unique_ips": 73
+            },
+            {
+                "timestamp": "2024-04-01 19:25",
+                "requests_per_second": 162,
+                "unique_ips": 94
+            },
+            {
+                "timestamp": "2024-04-01 19:30",
+                "requests_per_second": 134,
+                "unique_ips": 78
+            },
+            {
+                "timestamp": "2024-04-01 19:35",
+                "requests_per_second": 136,
+                "unique_ips": 92
+            },
+            {
+                "timestamp": "2024-04-01 19:40",
+                "requests_per_second": 183,
+                "unique_ips": 65
+            },
+            {
+                "timestamp": "2024-04-01 19:45",
+                "requests_per_second": 1065,
+                "unique_ips": 823
+            },
+            {
+                "timestamp": "2024-04-01 19:50",
+                "requests_per_second": 150,
+                "unique_ips": 91
+            },
+            {
+                "timestamp": "2024-04-01 19:55",
+                "requests_per_second": 105,
+                "unique_ips": 50
+            }
+        ]
+    },
+    {
+        "case_id": "CASE005",
+        "title": "Social Media Sentiment Surge",
+        "description": "Monitor sentiment trends to prevent a PR disaster.",
+        "objective": "Detect negative surges and act in time.",
+        "tools_allowed": [
+            "Forecast Predictor",
+            "LSTM Hint"
+        ],
+        "dataset": [
+            {
+                "timestamp": "2024-04-01 09:00",
+                "sentiment_score": 0.21,
+                "mentions": 91
+            },
+            {
+                "timestamp": "2024-04-01 10:00",
+                "sentiment_score": 0.16,
+                "mentions": 125
+            },
+            {
+                "timestamp": "2024-04-01 11:00",
+                "sentiment_score": 0.15,
+                "mentions": 104
+            },
+            {
+                "timestamp": "2024-04-01 12:00",
+                "sentiment_score": 0.12,
+                "mentions": 81
+            },
+            {
+                "timestamp": "2024-04-01 13:00",
+                "sentiment_score": 0.15,
+                "mentions": 133
+            },
+            {
+                "timestamp": "2024-04-01 14:00",
+                "sentiment_score": 0.19,
+                "mentions": 84
+            },
+            {
+                "timestamp": "2024-04-01 15:00",
+                "sentiment_score": 0.15,
+                "mentions": 90
+            },
+            {
+                "timestamp": "2024-04-01 16:00",
+                "sentiment_score": 0.15,
+                "mentions": 124
+            },
+            {
+                "timestamp": "2024-04-01 17:00",
+                "sentiment_score": 0.17,
+                "mentions": 139
+            },
+            {
+                "timestamp": "2024-04-01 18:00",
+                "sentiment_score": 0.21,
+                "mentions": 82
+            },
+            {
+                "timestamp": "2024-04-01 19:00",
+                "sentiment_score": 0.18,
+                "mentions": 149
+            },
+            {
+                "timestamp": "2024-04-01 20:00",
+                "sentiment_score": 0.15,
+                "mentions": 117
+            },
+            {
+                "timestamp": "2024-04-01 21:00",
+                "sentiment_score": 0.11,
+                "mentions": 127
+            },
+            {
+                "timestamp": "2024-04-01 22:00",
+                "sentiment_score": -0.26,
+                "mentions": 319
+            },
+            {
+                "timestamp": "2024-04-01 23:00",
+                "sentiment_score": -0.23,
+                "mentions": 108
+            },
+            {
+                "timestamp": "2024-04-02 00:00",
+                "sentiment_score": -0.21,
+                "mentions": 82
+            },
+            {
+                "timestamp": "2024-04-02 01:00",
+                "sentiment_score": -0.58,
+                "mentions": 327
+            },
+            {
+                "timestamp": "2024-04-02 02:00",
+                "sentiment_score": -0.6,
+                "mentions": 150
+            },
+            {
+                "timestamp": "2024-04-02 03:00",
+                "sentiment_score": -0.57,
+                "mentions": 133
+            },
+            {
+                "timestamp": "2024-04-02 04:00",
+                "sentiment_score": -0.99,
+                "mentions": 353
+            },
+            {
+                "timestamp": "2024-04-02 05:00",
+                "sentiment_score": -1,
+                "mentions": 93
+            },
+            {
+                "timestamp": "2024-04-02 06:00",
+                "sentiment_score": -1.0,
+                "mentions": 149
+            },
+            {
+                "timestamp": "2024-04-02 07:00",
+                "sentiment_score": -1,
+                "mentions": 127
+            },
+            {
+                "timestamp": "2024-04-02 08:00",
+                "sentiment_score": -1,
+                "mentions": 108
+            },
+            {
+                "timestamp": "2024-04-02 09:00",
+                "sentiment_score": -1,
+                "mentions": 132
+            },
+            {
+                "timestamp": "2024-04-02 10:00",
+                "sentiment_score": -1,
+                "mentions": 102
+            },
+            {
+                "timestamp": "2024-04-02 11:00",
+                "sentiment_score": -1,
+                "mentions": 110
+            },
+            {
+                "timestamp": "2024-04-02 12:00",
+                "sentiment_score": -1,
+                "mentions": 142
+            },
+            {
+                "timestamp": "2024-04-02 13:00",
+                "sentiment_score": -1,
+                "mentions": 134
+            },
+            {
+                "timestamp": "2024-04-02 14:00",
+                "sentiment_score": -1,
+                "mentions": 119
+            },
+            {
+                "timestamp": "2024-04-02 15:00",
+                "sentiment_score": -1,
+                "mentions": 149
+            },
+            {
+                "timestamp": "2024-04-02 16:00",
+                "sentiment_score": -1,
+                "mentions": 122
+            },
+            {
+                "timestamp": "2024-04-02 17:00",
+                "sentiment_score": -1,
+                "mentions": 103
+            },
+            {
+                "timestamp": "2024-04-02 18:00",
+                "sentiment_score": -1,
+                "mentions": 84
+            },
+            {
+                "timestamp": "2024-04-02 19:00",
+                "sentiment_score": -1,
+                "mentions": 126
+            },
+            {
+                "timestamp": "2024-04-02 20:00",
+                "sentiment_score": -1,
+                "mentions": 96
+            },
+            {
+                "timestamp": "2024-04-02 21:00",
+                "sentiment_score": -1,
+                "mentions": 94
+            },
+            {
+                "timestamp": "2024-04-02 22:00",
+                "sentiment_score": -1,
+                "mentions": 128
+            },
+            {
+                "timestamp": "2024-04-02 23:00",
+                "sentiment_score": -1,
+                "mentions": 103
+            },
+            {
+                "timestamp": "2024-04-03 00:00",
+                "sentiment_score": -1,
+                "mentions": 91
+            },
+            {
+                "timestamp": "2024-04-03 01:00",
+                "sentiment_score": -1,
+                "mentions": 89
+            },
+            {
+                "timestamp": "2024-04-03 02:00",
+                "sentiment_score": -1,
+                "mentions": 104
+            },
+            {
+                "timestamp": "2024-04-03 03:00",
+                "sentiment_score": -1,
+                "mentions": 102
+            },
+            {
+                "timestamp": "2024-04-03 04:00",
+                "sentiment_score": -1,
+                "mentions": 135
+            },
+            {
+                "timestamp": "2024-04-03 05:00",
+                "sentiment_score": -1,
+                "mentions": 112
+            },
+            {
+                "timestamp": "2024-04-03 06:00",
+                "sentiment_score": -1,
+                "mentions": 103
+            },
+            {
+                "timestamp": "2024-04-03 07:00",
+                "sentiment_score": -1,
+                "mentions": 140
+            },
+            {
+                "timestamp": "2024-04-03 08:00",
+                "sentiment_score": -1,
+                "mentions": 309
+            },
+            {
+                "timestamp": "2024-04-03 09:00",
+                "sentiment_score": -1,
+                "mentions": 114
+            },
+            {
+                "timestamp": "2024-04-03 10:00",
+                "sentiment_score": -1,
+                "mentions": 122
+            },
+            {
+                "timestamp": "2024-04-03 11:00",
+                "sentiment_score": -1,
+                "mentions": 288
+            },
+            {
+                "timestamp": "2024-04-03 12:00",
+                "sentiment_score": -1,
+                "mentions": 114
+            },
+            {
+                "timestamp": "2024-04-03 13:00",
+                "sentiment_score": -1,
+                "mentions": 136
+            },
+            {
+                "timestamp": "2024-04-03 14:00",
+                "sentiment_score": -1,
+                "mentions": 90
+            },
+            {
+                "timestamp": "2024-04-03 15:00",
+                "sentiment_score": -1,
+                "mentions": 126
+            },
+            {
+                "timestamp": "2024-04-03 16:00",
+                "sentiment_score": -1,
+                "mentions": 95
+            },
+            {
+                "timestamp": "2024-04-03 17:00",
+                "sentiment_score": -1,
+                "mentions": 89
+            },
+            {
+                "timestamp": "2024-04-03 18:00",
+                "sentiment_score": -1,
+                "mentions": 149
+            },
+            {
+                "timestamp": "2024-04-03 19:00",
+                "sentiment_score": -1,
+                "mentions": 119
+            },
+            {
+                "timestamp": "2024-04-03 20:00",
+                "sentiment_score": -1,
+                "mentions": 138
+            },
+            {
+                "timestamp": "2024-04-03 21:00",
+                "sentiment_score": -1,
+                "mentions": 106
+            },
+            {
+                "timestamp": "2024-04-03 22:00",
+                "sentiment_score": -1,
+                "mentions": 127
+            },
+            {
+                "timestamp": "2024-04-03 23:00",
+                "sentiment_score": -1,
+                "mentions": 110
+            },
+            {
+                "timestamp": "2024-04-04 00:00",
+                "sentiment_score": -1,
+                "mentions": 145
+            },
+            {
+                "timestamp": "2024-04-04 01:00",
+                "sentiment_score": -1,
+                "mentions": 126
+            },
+            {
+                "timestamp": "2024-04-04 02:00",
+                "sentiment_score": -1,
+                "mentions": 214
+            },
+            {
+                "timestamp": "2024-04-04 03:00",
+                "sentiment_score": -1,
+                "mentions": 108
+            },
+            {
+                "timestamp": "2024-04-04 04:00",
+                "sentiment_score": -1,
+                "mentions": 274
+            },
+            {
+                "timestamp": "2024-04-04 05:00",
+                "sentiment_score": -1,
+                "mentions": 142
+            },
+            {
+                "timestamp": "2024-04-04 06:00",
+                "sentiment_score": -1,
+                "mentions": 142
+            },
+            {
+                "timestamp": "2024-04-04 07:00",
+                "sentiment_score": -1,
+                "mentions": 143
+            },
+            {
+                "timestamp": "2024-04-04 08:00",
+                "sentiment_score": -1,
+                "mentions": 139
+            },
+            {
+                "timestamp": "2024-04-04 09:00",
+                "sentiment_score": -1,
+                "mentions": 141
+            },
+            {
+                "timestamp": "2024-04-04 10:00",
+                "sentiment_score": -1,
+                "mentions": 316
+            },
+            {
+                "timestamp": "2024-04-04 11:00",
+                "sentiment_score": -1,
+                "mentions": 286
+            },
+            {
+                "timestamp": "2024-04-04 12:00",
+                "sentiment_score": -1,
+                "mentions": 428
+            },
+            {
+                "timestamp": "2024-04-04 13:00",
+                "sentiment_score": -1,
+                "mentions": 97
+            },
+            {
+                "timestamp": "2024-04-04 14:00",
+                "sentiment_score": -1,
+                "mentions": 100
+            },
+            {
+                "timestamp": "2024-04-04 15:00",
+                "sentiment_score": -1,
+                "mentions": 134
+            },
+            {
+                "timestamp": "2024-04-04 16:00",
+                "sentiment_score": -1,
+                "mentions": 84
+            },
+            {
+                "timestamp": "2024-04-04 17:00",
+                "sentiment_score": -1,
+                "mentions": 128
+            },
+            {
+                "timestamp": "2024-04-04 18:00",
+                "sentiment_score": -1,
+                "mentions": 127
+            },
+            {
+                "timestamp": "2024-04-04 19:00",
+                "sentiment_score": -1,
+                "mentions": 145
+            },
+            {
+                "timestamp": "2024-04-04 20:00",
+                "sentiment_score": -1,
+                "mentions": 102
+            },
+            {
+                "timestamp": "2024-04-04 21:00",
+                "sentiment_score": -1,
+                "mentions": 119
+            },
+            {
+                "timestamp": "2024-04-04 22:00",
+                "sentiment_score": -1,
+                "mentions": 135
+            },
+            {
+                "timestamp": "2024-04-04 23:00",
+                "sentiment_score": -1,
+                "mentions": 137
+            },
+            {
+                "timestamp": "2024-04-05 00:00",
+                "sentiment_score": -1,
+                "mentions": 138
+            },
+            {
+                "timestamp": "2024-04-05 01:00",
+                "sentiment_score": -1,
+                "mentions": 339
+            },
+            {
+                "timestamp": "2024-04-05 02:00",
+                "sentiment_score": -1,
+                "mentions": 233
+            },
+            {
+                "timestamp": "2024-04-05 03:00",
+                "sentiment_score": -1,
+                "mentions": 90
+            },
+            {
+                "timestamp": "2024-04-05 04:00",
+                "sentiment_score": -1,
+                "mentions": 139
+            },
+            {
+                "timestamp": "2024-04-05 05:00",
+                "sentiment_score": -1,
+                "mentions": 109
+            },
+            {
+                "timestamp": "2024-04-05 06:00",
+                "sentiment_score": -1,
+                "mentions": 96
+            },
+            {
+                "timestamp": "2024-04-05 07:00",
+                "sentiment_score": -1,
+                "mentions": 81
+            },
+            {
+                "timestamp": "2024-04-05 08:00",
+                "sentiment_score": -1,
+                "mentions": 120
+            },
+            {
+                "timestamp": "2024-04-05 09:00",
+                "sentiment_score": -1,
+                "mentions": 128
+            },
+            {
+                "timestamp": "2024-04-05 10:00",
+                "sentiment_score": -1,
+                "mentions": 300
+            },
+            {
+                "timestamp": "2024-04-05 11:00",
+                "sentiment_score": -1,
+                "mentions": 149
+            },
+            {
+                "timestamp": "2024-04-05 12:00",
+                "sentiment_score": -1,
+                "mentions": 426
+            },
+            {
+                "timestamp": "2024-04-05 13:00",
+                "sentiment_score": -1,
+                "mentions": 92
+            },
+            {
+                "timestamp": "2024-04-05 14:00",
+                "sentiment_score": -1,
+                "mentions": 147
+            },
+            {
+                "timestamp": "2024-04-05 15:00",
+                "sentiment_score": -1,
+                "mentions": 127
+            },
+            {
+                "timestamp": "2024-04-05 16:00",
+                "sentiment_score": -1,
+                "mentions": 372
+            },
+            {
+                "timestamp": "2024-04-05 17:00",
+                "sentiment_score": -1,
+                "mentions": 80
+            },
+            {
+                "timestamp": "2024-04-05 18:00",
+                "sentiment_score": -1,
+                "mentions": 127
+            },
+            {
+                "timestamp": "2024-04-05 19:00",
+                "sentiment_score": -1,
+                "mentions": 135
+            },
+            {
+                "timestamp": "2024-04-05 20:00",
+                "sentiment_score": -1,
+                "mentions": 115
+            },
+            {
+                "timestamp": "2024-04-05 21:00",
+                "sentiment_score": -1,
+                "mentions": 93
+            },
+            {
+                "timestamp": "2024-04-05 22:00",
+                "sentiment_score": -1,
+                "mentions": 131
+            },
+            {
+                "timestamp": "2024-04-05 23:00",
+                "sentiment_score": -1,
+                "mentions": 92
+            },
+            {
+                "timestamp": "2024-04-06 00:00",
+                "sentiment_score": -1,
+                "mentions": 106
+            },
+            {
+                "timestamp": "2024-04-06 01:00",
+                "sentiment_score": -1,
+                "mentions": 130
+            },
+            {
+                "timestamp": "2024-04-06 02:00",
+                "sentiment_score": -1,
+                "mentions": 146
+            },
+            {
+                "timestamp": "2024-04-06 03:00",
+                "sentiment_score": -1,
+                "mentions": 113
+            },
+            {
+                "timestamp": "2024-04-06 04:00",
+                "sentiment_score": -1,
+                "mentions": 122
+            },
+            {
+                "timestamp": "2024-04-06 05:00",
+                "sentiment_score": -1,
+                "mentions": 146
+            },
+            {
+                "timestamp": "2024-04-06 06:00",
+                "sentiment_score": -1,
+                "mentions": 144
+            },
+            {
+                "timestamp": "2024-04-06 07:00",
+                "sentiment_score": -1,
+                "mentions": 122
+            },
+            {
+                "timestamp": "2024-04-06 08:00",
+                "sentiment_score": -1,
+                "mentions": 97
+            }
+        ]
+    }
+]
